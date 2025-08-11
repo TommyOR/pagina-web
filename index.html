@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Proyecto | GitHub Pages</title>
+  <meta name="description" content="Landing sencilla para publicar en GitHub Pages." />
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --surface: #121318;
+      --text: #e6e6e6;
+      --muted: #b9c0c9;
+      --brand: #7bdcb5;
+      --brand-strong:#49b893;
+      --accent: #f39c6b;
+      --ring: #2e8267;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f7f7f9;
+        --surface:#ffffff;
+        --text:#1b1e25;
+        --muted:#4c5563;
+        --brand:#1f9d7a;
+        --brand-strong:#157a5f;
+        --accent:#e86f2e;
+        --ring:#1f9d7a33;
+      }
+    }
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: system-ui, sans-serif;
+      line-height:1.6;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 80% -10%, #1a1f24 0%, transparent 60%), var(--bg);
+    }
+    .container{ width:min(1100px, 92%); margin-inline:auto; }
+    .section{ padding: 64px 0; }
+    .section.alt{ background: var(--surface); border-top: 1px solid #ffffff0e; border-bottom: 1px solid #ffffff0e; }
+    h1,h2,h3{ line-height:1.2; margin:0 0 12px; }
+    h1{ font-size: clamp(2rem, 2.6vw + 1rem, 3rem); font-weight: 800; }
+    h2{ font-size: clamp(1.5rem, 1.6vw + .8rem, 2.2rem); font-weight: 800; }
+    h3{ font-size: 1.1rem; font-weight: 700;}
+    p{ margin:0 0 14px; color:var(--muted); }
+    a{ color: var(--brand); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    code{ background:#00000033; padding:.15rem .35rem; border-radius: .35rem; }
+    .site-header{
+      position: sticky; top:0; z-index: 50;
+      backdrop-filter: blur(8px);
+      background: color-mix(in srgb, var(--bg) 70%, transparent);
+      border-bottom: 1px solid #ffffff14;
+    }
+    .header-inner{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+    .brand{
+      display:flex; gap:.6rem; align-items:center;
+      color: var(--text); font-weight: 800;
+    }
+    .brand span{ color: var(--brand); }
+    .nav{ display:flex; gap: 1rem; }
+    .nav a{ padding:.45rem .7rem; border-radius:.6rem; color:var(--text); }
+    .nav a:hover{ background:#ffffff10; text-decoration:none; }
+    .hero{
+      position: relative;
+      padding: 80px 0 64px;
+    }
+    .lede{ font-size: 1.125rem; max-width: 64ch; }
+    .badge{
+      background: linear-gradient(90deg, var(--brand), var(--brand-strong));
+      color:#08271f; padding:.18em .4em; border-radius:.35rem;
+    }
+    .cta{ display:flex; gap:.75rem; margin-top: 14px; }
+    .btn{
+      display:inline-block; border:1px solid #ffffff22; color:var(--text);
+      padding:.7rem 1rem; border-radius:.8rem; font-weight:600;
+      transition: transform .1s ease, background .2s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); background:#ffffff10; }
+    .btn.primary{ background: var(--brand); color:#093528; border-color: transparent; }
+    .btn.primary:hover{ background: var(--brand-strong); }
+    .features{
+      list-style:none; padding:0; margin: 24px 0 0;
+      display:grid; gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .features li{
+      border:1px solid #ffffff14; border-radius: 16px; padding:16px;
+      background: linear-gradient(180deg, #ffffff07, transparent);
+    }
+    .site-footer{ border-top:1px solid #ffffff14; margin-top: 24px; }
+    .footer-inner{ padding: 22px 0; display:grid; gap:6px; }
+    .small{ font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span>◆</span> Mi Proyecto
+      </a>
+      <nav class="nav">
+        <a href="#caracteristicas">Características</a>
+        <a href="#guia">Guía</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>Publica tu sitio en <span class="badge">GitHub Pages</span></h1>
+      <p class="lede">Plantilla minimalista y responsive lista para tu repositorio.</p>
+      <div class="cta">
+        <a class="btn primary" href="#guia">Cómo publicarlo</a>
+        <a class="btn" href="#caracteristicas">Ver características</a>
+      </div>
+    </section>
+
+    <section id="caracteristicas" class="section container">
+      <h2>Características</h2>
+      <ul class="features">
+        <li><h3>Diseño limpio</h3><p>Tipografía clara y buen contraste.</p></li>
+        <li><h3>HTML + CSS puro</h3><p>Sin dependencias, ideal para GitHub Pages.</p></li>
+        <li><h3>Accesible</h3><p>Estructura semántica y fácil de navegar.</p></li>
+      </ul>
+    </section>
+
+    <section id="guia" class="section alt container">
+      <h2>Guía rápida</h2>
+      <ol>
+        <li>Crea un repositorio en GitHub.</li>
+        <li>Sube este archivo <code>index.html</code>.</li>
+        <li>En Settings → Pages, selecciona <strong>main</strong> y carpeta root.</li>
+        <li>Abre el enlace que GitHub te da.</li>
+      </ol>
+    </section>
+
+    <section id="contacto" class="section container">
+      <h2>Contacto</h2>
+      <p>Escríbeme: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mi Proyecto. Hecho con ♥ en GitHub Pages.</p>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
