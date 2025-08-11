@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Proyecto | GitHub Pages</title>
+  <meta name="description" content="Landing sencilla para publicar en GitHub Pages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span aria-hidden="true">◆</span> Mi Proyecto
+      </a>
+
+      <nav class="nav" aria-label="principal">
+        <a href="#caracteristicas">Características</a>
+        <a href="#demo">Demo</a>
+        <a href="#guia">Guía</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Publica tu sitio en <span class="badge">GitHub Pages</span></h1>
+        <p class="lede">
+          Plantilla minimalista, accesible y responsive para repositorios públicos o privados.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#guia">Cómo publicarlo</a>
+          <a class="btn" href="#caracteristicas">Ver características</a>
+        </div>
+      </div>
+      <div class="shape" aria-hidden="true"></div>
+    </section>
+
+    <section id="caracteristicas" class="section">
+      <div class="container">
+        <h2>Características</h2>
+        <ul class="features">
+          <li>
+            <h3>Diseño limpio</h3>
+            <p>Tipografía Inter, espaciado generoso y buen contraste (soporta dark mode).</p>
+          </li>
+          <li>
+            <h3>Solo HTML & CSS</h3>
+            <p>Sin dependencias ni build: ideal para Pages.</p>
+          </li>
+          <li>
+            <h3>Accesible</h3>
+            <p>Skip link, etiquetas semánticas y navegación clara.</p>
+          </li>
+          <li>
+            <h3>Listo para docs</h3>
+            <p>Secciones de demo, guía e info de contacto.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="demo" class="section alt">
+      <div class="container">
+        <h2>Demo / Capturas</h2>
+        <div class="grid">
+          <figure class="card">
+            <div class="placeholder" role="img" aria-label="Captura de ejemplo"></div>
+            <figcaption>Tus capturas aquí</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="placeholder" role="img" aria-label="Gráfico de ejemplo"></div>
+            <figcaption>Imágenes o gifs del proyecto</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="placeholder" role="img" aria-label="Terminal de ejemplo"></div>
+            <figcaption>Comandos / resultados</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="guia" class="section">
+      <div class="container">
+        <h2>Guía rápida de publicación</h2>
+        <ol class="steps">
+          <li>Crea un repositorio en GitHub (p. ej., <strong>mi-sitio</strong>).</li>
+          <li>Sube <code>index.html</code> y <code>styles.css</code> a la raíz.</li>
+          <li>Ve a <em>Settings → Pages</em>, en <em>Branch</em> elige <strong>main</strong> y carpeta <strong>/root</strong>. Guarda.</li>
+          <li>Tu sitio quedará en: <code>https://tuUsuario.github.io/mi-sitio/</code>.</li>
+        </ol>
+
+        <details>
+          <summary>Comandos Git opcionales</summary>
+          <pre><code>git init
+git add .
+git commit -m "Publicación inicial"
+git branch -M main
+git remote add origin https://github.com/tuUsuario/mi-sitio.git
+git push -u origin main
+</code></pre>
+        </details>
+      </div>
+    </section>
+
+    <section id="contacto" class="section alt">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>¿Dudas o sugerencias? Escríbeme: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mi Proyecto. Hecho con ♥ y GitHub Pages.</p>
+      <p class="small">Este sitio es una plantilla educativa de publicación estática.</p>
+    </div>
+    <script>
+      // Solo para actualizar el año sin librerías
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
